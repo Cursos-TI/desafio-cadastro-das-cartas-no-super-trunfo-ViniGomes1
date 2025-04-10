@@ -18,6 +18,8 @@ int main() {
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
+    double bilhoes = 1000000000;
+
     char estado[20], estado2[20];
     //strcpy(estado, "Algo"); "%s"
     char codigoCarta[4], codigoCarta2[4], nomeCidade[30], nomeCidade2[30];
@@ -80,6 +82,15 @@ int main() {
     scanf("%d", &numeroPontosTuristicos2);
 
 
+    float densidadePopulacional = populacao / areaKm;
+    float densidadePopulacional2 = populacao2 / areaKm2;
+
+    double pibBilhoes = PIB * bilhoes;
+    double pibBilhoes2 = PIB2 * bilhoes;
+
+    double pibPerCapita = pibBilhoes / populacao;
+    double pibPerCapita2 = pibBilhoes2 / populacao2;
+
     printf("CARTA 1: \n");
     printf("\nEstado: %s \n", estado);
     printf("Codigo: %s \n", codigoCarta);
@@ -88,6 +99,8 @@ int main() {
     printf("Área: %.2f km² \n", areaKm);
     printf("PIB: %.2f bilhões de reais \n", PIB);
     printf("Número de pontos turísticos: %d \n", numeroPontosTuristicos);
+    printf("Densidade Populacional: %.2f \n", densidadePopulacional);
+    printf("PIB per Capita: %.2lf \n", pibPerCapita);
 
     printf("CARTA 2: \n");
     printf("\nEstado: %s \n", estado2);
@@ -97,5 +110,8 @@ int main() {
     printf("Área: %.2f km² \n", areaKm2);
     printf("PIB: %.2f bilhões de reais \n", PIB2);
     printf("Número de pontos turísticos: %d \n", numeroPontosTuristicos2);
+    printf("Densidade Populacional: %.2f \n", densidadePopulacional2);
+    printf("PIB per Capita: %.2lf \n", pibPerCapita2);
+    
     return 0;
 }
