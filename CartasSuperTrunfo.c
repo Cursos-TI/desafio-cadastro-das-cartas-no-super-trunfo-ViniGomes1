@@ -29,6 +29,11 @@ int main() {
     float areaKm, areaKm2, PIB, PIB2;
     //areaKm = 2.20;"%.2f"
 
+    float densidadePopulacional, densidadePopulacional2;
+    double pibPerCapita, pibPerCapita2;
+    float superPoder, superPoder2;
+    int resultado;
+
     //entrada carta 1
     printf("CARTA 1: \n");
     printf("Digite o estado: ");
@@ -82,15 +87,68 @@ int main() {
     scanf("%d", &numeroPontosTuristicos2);
 
 
-    float densidadePopulacional = populacao / areaKm;
-    float densidadePopulacional2 = populacao2 / areaKm2;
+    densidadePopulacional = populacao / areaKm;
+    densidadePopulacional2 = populacao2 / areaKm2;
 
     double pibBilhoes = PIB * bilhoes;
     double pibBilhoes2 = PIB2 * bilhoes;
 
-    double pibPerCapita = pibBilhoes / populacao;
-    double pibPerCapita2 = pibBilhoes2 / populacao2;
+    pibPerCapita = pibBilhoes / populacao;
+    pibPerCapita2 = pibBilhoes2 / populacao2;
 
+    superPoder = populacao + areaKm + PIB + numeroPontosTuristicos + pibPerCapita + (1/densidadePopulacional);
+    superPoder2 = populacao2 + areaKm2 + PIB2 + numeroPontosTuristicos2 + pibPerCapita2 + (1/densidadePopulacional2);
+
+    if (populacao > populacao2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("\nPopulacao: %d\n", resultado);
+
+    if (areaKm > areaKm2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("areaKm²: %d\n", resultado);
+
+    if (PIB > PIB2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("PIB: %d\n", resultado);
+
+    if (numeroPontosTuristicos > numeroPontosTuristicos2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("numero de Pontos Turisticos: %d\n", resultado);
+
+    if (densidadePopulacional > densidadePopulacional2){
+        resultado = 0;
+    }else{
+    resultado = 1;
+    }
+    printf("Densidade Populacional: %d\n", resultado);
+
+    if (pibPerCapita > pibPerCapita2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("PIB Per Capita: %d\n", resultado);
+
+    if (superPoder > superPoder2){
+        resultado = 1;
+    }else{
+    resultado = 0;
+    }
+    printf("Super Poder: %d\n", resultado);
+
+    /*
     printf("CARTA 1: \n");
     printf("\nEstado: %s \n", estado);
     printf("Codigo: %s \n", codigoCarta);
@@ -112,6 +170,6 @@ int main() {
     printf("Número de pontos turísticos: %d \n", numeroPontosTuristicos2);
     printf("Densidade Populacional: %.2f \n", densidadePopulacional2);
     printf("PIB per Capita: %.2lf \n", pibPerCapita2);
-    
+    */
     return 0;
 }
